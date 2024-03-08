@@ -1,1 +1,2 @@
-# alx-interview
+# ALX SE PROJECT
+## Pascal's triangle
