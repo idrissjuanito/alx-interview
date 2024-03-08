@@ -1,2 +1,1 @@
-# ALX SE PROJECT
-## Pascal's triangle
+# ALX SE Interview Projects repository
