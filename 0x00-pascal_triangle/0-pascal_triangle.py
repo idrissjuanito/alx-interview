@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 contains function for pascal triangle
 """
