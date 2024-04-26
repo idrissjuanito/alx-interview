@@ -9,7 +9,7 @@ def validUTF8(data):
         if not 0 <= data[i] <= 255:
             return False
         if count == 0:
-            if (data[i] >> 7) == 0b0:
+            if (data[i] >> 7) == 0:
                 continue
             elif (data[i] >> 5) == 0b110:
                 count = 1
