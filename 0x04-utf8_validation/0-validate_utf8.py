@@ -6,8 +6,6 @@ def validUTF8(data):
     """ Validates utf-8 encoded chars """
     count = 0
     for i in range(len(data)):
-        if not 0 <= data[i] <= 255:
-            return False
         if count == 0:
             if (data[i] >> 7) == 0:
                 continue
