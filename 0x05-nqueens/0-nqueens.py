@@ -7,12 +7,13 @@ if len(sys.argv) < 2:
     print("Usage: nqueens N")
     sys.exit(1)
 
-N = sys.argv[1]
-if type(N) is not int:
+try:
+    N = int(sys.argv[1])
+except ValueError:
     print("N must be a number")
     sys.exit(1)
 if N < 4:
-    print("If N is smaller than 4, print ")
+    print("N must be at least 4")
     sys.exit(1)
 
 for i in range(N - 2):
