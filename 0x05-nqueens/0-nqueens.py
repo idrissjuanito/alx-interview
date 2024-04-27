@@ -27,6 +27,8 @@ for i in range(N - 2):
             new_y = prev_y + inc
             if new_y >= N:
                 y = prev_y - decr
+                if y < 0:
+                    y = 0
             else:
                 y = new_y
         lst.append([x, y])
