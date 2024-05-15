@@ -24,8 +24,11 @@ def isWinner(x, nums):
             "Maria": 0,
             "Ben": 0
             }
-    for round in range(x):
+    round = 0
+    while round < x and round < len(nums):
         roundSet = [i for i in range(1, nums[round] + 1)]
         roundWinner = play(roundSet, "Maria", "Ben")
         players[roundWinner] += 1
+        round += 1
+    if players["maria"] == players["Ben"]: return None
     return "Maria" if players["Maria"] > players["Ben"] else "Ben"
