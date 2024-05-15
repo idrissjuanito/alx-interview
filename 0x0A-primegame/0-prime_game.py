@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Prime game module """
 
+
 def play(roundSet, playing, potentialWinner):
     """ executes a players move """
     if len(roundSet) == 1:
@@ -12,6 +13,7 @@ def play(roundSet, playing, potentialWinner):
         if roundSet[j] % prime == 0:
             roundSet.pop(j)
     return play(roundSet, potentialWinner, playing)
+
 
 def isWinner(x, nums):
     """ Finds the winner after x number of rounds
