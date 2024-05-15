@@ -30,5 +30,6 @@ def isWinner(x, nums):
         roundWinner = play(roundSet, "Maria", "Ben")
         players[roundWinner] += 1
         round += 1
-    if players["maria"] == players["Ben"]: return None
+    if players["maria"] == players["Ben"]:
+        return None
     return "Maria" if players["Maria"] > players["Ben"] else "Ben"
