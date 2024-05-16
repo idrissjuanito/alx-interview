@@ -28,18 +28,14 @@ def isWinner(x, nums):
     round = 0
     nums.sort()
     prev_n = 0
-    while round < x:
-        if round >= len(nums):
-            n = nums[round - len(nums) - 1]
-        else:
-            n = nums[round]
+    while round < x and round < len(nums):
+        n = nums[round]
         roundSet = [1] if prev_n > 0 else []
         roundSet += primes.copy()
         for i in range(prev_n + 1, n + 1):
             roundSet.append(i)
         primes.clear()
         roundWinner = play(roundSet, "Maria", "Ben")
-        print(roundWinner)
         players[roundWinner] += 1
         prev_n = n
         round += 1
